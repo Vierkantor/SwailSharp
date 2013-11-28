@@ -41,7 +41,7 @@ namespace SwailSharp {
 	
 	// the Swail wrapper, should probably inherit from SwailWindow in the future
 	public class SwailShellWindow : SwailObject {
-		public ShellWindow Window;
+		ShellWindow Window;
 		
 		// do basically the same as a ShellWindow but wrap it
 		SwailShellWindow() : base() {
