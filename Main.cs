@@ -1,4 +1,5 @@
 using System;
+using System.Windows.Forms;
 
 namespace SwailSharp
 {
@@ -6,7 +7,7 @@ namespace SwailSharp
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Hello World!");
+			Application.Run(new ShellWindow());
 		}
 	}
 }
