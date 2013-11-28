@@ -7,7 +7,7 @@ namespace SwailSharp
 	{
 		public static void Main (string[] args)
 		{
-			Application.Run(new ShellWindow());
+			Application.Run(new SwailShellWindow().Window);
 		}
 	}
 }

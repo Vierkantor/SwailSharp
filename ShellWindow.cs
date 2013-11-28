@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace SwailSharp {
-	public class ShellWindow : Form {
+	class ShellWindow : Form {
 		IList<Label> Log;
 		TextBox InputBox;
 		
@@ -36,6 +36,16 @@ namespace SwailSharp {
 			line.Text = "> " + text;
 			line.ForeColor = Color.Red;
 			AddLogLine(line);
+		}
+	}
+	
+	// the Swail wrapper, should probably inherit from SwailWindow in the future
+	public class SwailShellWindow : SwailObject {
+		public ShellWindow Window;
+		
+		// do basically the same as a ShellWindow but wrap it
+		SwailShellWindow() : base() {
+			this.Window = new ShellWindow();
 		}
 	}
 }
